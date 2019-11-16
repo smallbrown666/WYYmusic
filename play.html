@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style/play.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <script src="./js/play.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <title>播放页面</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- play-wrap  start  页面背景  停放渐变去做的 -->
+    <div class="play-wrap">
+        <div class="disc">
+            <img src="#" alt="">
+        </div>
+
+    <!-- play-content start -->
+    <div class="play-control">
+         <div class="play-progress">
+             <div class="currentTime time">
+
+             </div>
+             <div class="progeess">
+                 <div class="pro-bg"> </div>
+                 <div class="pro-bar"></div>
+             </div>
+             <div class="duration time">
+
+             </div>
+         </div>
+    <div class="controls">
+        <div class="playing">
+            <span class="iconfont icon-zanting"></span>
+        </div>
+    </div> 
+    </div>
+
+    <!-- play-content end -->
+
+
+    <!-- 歌词 -->
+    <div class="play-lyric">
+        <div class="lyric-wrap"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- vue是单页面出处理 我这个是多页面处理 所以我要在 recommend.js 中的a标签里面处理就收play.html播放所需要的数据-->
+    <!-- play-wrap  end  页面背景  停放渐变去做的 -->
+        <script>
+                //rem  指根标签的字体放大倍速  1 rem  就是1倍    100 * 表示时按照100像素来缩放的  window.innerWidth  表示设备的宽度    320  是手机的最小宽度   这样使用rem 就可以让宽高和文字随手机屏幕的大小而自然的改变大小  0.16rem 表示16px 按照手机为320px算
+                document.documentElement.style.fontSize = 100 * (window.innerWidth / 320 ) + 'px';
+            </script>
+</body>
+</html>

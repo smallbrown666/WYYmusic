@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 1rem;
+            height: 1rem;
+            font-size: 0.16rem;
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'box'>111</div>
+    <script>
+        //rem  指根标签的字体放大倍速  1 rem  就是1倍    100 * 表示时按照100像素来缩放的  window.innerWidth  表示设备的宽度    320  是手机的最小宽度   这样使用rem 就可以让宽高和文字随手机屏幕的大小而自然的改变大小  0.16rem 表示16px 按照手机为320px算
+        document.documentElement.style.fontSize = 100 * (window.innerWidth / 320 ) + 'px';
+    </script>
+</body>
+</html>

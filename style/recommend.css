@@ -1,0 +1,256 @@
+@charset 'UTF-8';
+
+html,body{
+    height: 100%;
+}
+
+.recommend-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: red; */
+}
+
+.rec-head{
+    width: 100%;
+    height:1.58rem;
+    /*用 padding 占位置 图片可以覆盖上去 margin会留一个空白区域
+    padding撑大了盒子 为了让盒子大小不变 用怪异盒模型
+    */
+    padding: 0.19rem 0.13rem 0;
+    box-sizing: border-box;
+    /* background-color: pink; */
+}
+.rec-head .rec-control{
+    position: fixed;
+    top:0.19rem;
+    left:0.13rem;
+    right:0.13rem;
+    height: 0.2rem;
+    bottom: 0;
+    /* background-color: skyblue; */
+    display:flex;
+    justify-content: space-between;
+}.rec-head .rec-control a{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.rec-head .rec-control .back{  
+    width: 0.2rem;
+    /* background-color:red; */
+}
+.rec-head .rec-control .problem{
+    width: 0.2rem;
+    /* background-color:red; */
+}
+.rec-head .rec-control  .iconfont{
+    font-size: 0.16rem;
+    color: white;
+    /* background-color: #fff; */
+}
+
+/* rec-content start */
+.rec-content{
+    overflow: hidden;
+    position: absolute;
+    top:1.46rem;
+    bottom: -0.8rem;/*出现一个向下滚动的效果 就是2个盒子覆盖的过程*/
+    width: 100%;
+    border-radius: 0.08rem 0.08rem 0 0 ;
+    background-color: #fff;
+}
+.rec-content .res-title{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 0.4rem;
+    padding:0.11rem;
+    /* border-radius: 0.08rem 0.08rem 0 0; */
+    box-sizing: border-box;
+    /* background-color: red; */
+}
+.rec-content .res-title a{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+.rec-content .res-title .play{
+    width: 0.77rem;
+}
+.rec-content .res-title .more{
+    width: 0.5rem;
+}
+.rec-content .res-title .iconfont{
+    font-size: 0.16rem;
+    margin-left: 0.04rem;
+    color:#333;
+}
+.rec-content .res-title .name{
+    font-size:0.12rem;
+}
+
+.rec-content .content-wrap{
+    position:absolute;
+    top:0.4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding:0  0.13rem;
+    box-sizing: border-box;
+    /* background-color: skyblue; */
+}
+/* rec-content end */
+.rec-content .content-wrap .rec-item{
+    /* display:flex; */
+    /* height: 0.5rem; */
+    /* justify-content: space-between; */
+    /* align-content: center; */
+    /* margin-top:-0.72rem; */
+    box-sizing: border-box;
+}
+.rec-content .content-wrap .rec-item a{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0.077rem 0;
+}
+.rec-content .content-wrap .rec-item a:active{
+    background-color: skyblue;
+}
+.rec-content .content-wrap .rec-item .item-info{
+    flex:1;
+    display:flex;
+    height: 0.32rem;
+    /* background-color: deeppink; */
+}
+.rec-content .content-wrap .rec-item .item-play{
+    display:flex;
+    flex:0 0 0.42rem;
+    width: 0.42rem;
+    height: 0.32rem;
+    /* background-color: black; */
+}
+.rec-content .content-wrap .rec-item .item-play .iconfont{
+    font-size:0.20rem;
+    padding-top:0.04rem;
+}
+.rec-content .content-wrap .rec-item .item-info .info-img{
+    display:flex;
+    width: 0.32rem;
+    height: 0.32rem;
+    flex:0 0 0.32rem;
+    /* background-color: red; */
+}
+.rec-content .content-wrap .rec-item .item-info .info-img img{
+    width: 100%;
+}
+.rec-content .content-wrap .rec-item .item-info{
+    flex:1;
+    margin-left: 0.08rem;
+}
+.rec-content .content-wrap .rec-item .item-info .info .info-title{
+    font-size:0.09rem;
+    line-height: 0.2rem;
+    color: #333;
+}
+.rec-content .content-wrap .rec-item .item-info .info .info-desc{
+    font-size: 0.08rem;
+    line-height: 0.04rem;
+    padding-top:0.04rem;
+    color: #880088;
+}
+
+/*control start  控件播放*/
+.control{
+    display:none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.39rem;
+    padding: 0.04rem 0.05rem;
+    box-sizing: border-box;
+    background-color:#fff;
+}
+.control a{
+    display:flex;
+    
+}
+.control .control-content{
+    flex:1;
+    display:flex;
+    /* background-color: red; */
+}
+.control .control-content .con-img{
+    overflow: hidden;
+    display:flex;
+    width: 0.3rem;
+    flex:0 0 0.30rem;
+    height: 0.3rem;
+    border-radius: 50%;
+    margin-right: 0.04rem;
+    background-color: red;
+}
+.control .control-content .con-img img{
+    width: 100%;
+    height: 100%;
+}
+.control .control-content .con-info{
+    flex: 1;
+}
+.control .control-content .con-info .con-title{
+    font-size:0.1rem;
+    color:#333;
+    line-height:0.17rem;
+}
+.control .control-content .con-info .con-desc{
+    font-size:0.08rem;
+    columns: #909090;;
+    line-height:0.14rem;
+}
+.control .con-play{
+    display: flex;
+    align-items: center;  /*单行居中 用items 多行用 center*/
+    width: 0.58rem;
+    flex:0 0 0.58rem;
+    /* background-color: blue; */
+}
+.control .con-play .con-playing{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 0.2rem;
+    height: 0.2rem;
+    border:0.01rem  solid #ff3a3a;
+    border-radius: 50%;
+}
+.control .con-play .con-playing .iconfont{
+    color:#ff3a3a;
+    font-size: 0.12rem;
+    width: 100%;
+    height: 100%;
+    line-height: 0.2rem;
+    text-align: center;
+    border-radius: 50%;
+    /* background-color: #fff; */
+}
+.control .con-play .icon-bofangliebiao{
+    width: 0.21rem;
+    height: 0.21rem;
+    text-align: center;
+    margin-left: 0.14rem;
+    font-size: 0.18rem;
+}
+
+
+
+
+
+
+
+/*control end  控件播放*/

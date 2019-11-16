@@ -1,0 +1,149 @@
+@charset 'UTF-8';
+
+
+.play-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle closest-corner at center 40%, #320c0c 1.14rem, #000 );
+}
+ 
+.play-wrap .disc{
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+    margin-left: -1.16rem;
+    width: 2.32rem;
+    height: 2.32rem;
+    border-radius: 50%;
+    padding: 0.34rem;  /*在圆里面加了一个盒子  放入图片*/
+    box-sizing: border-box;
+    background-color: #000;
+}
+.play-wrap .disc img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* play-control start */
+.play-control{
+    position: fixed;
+    /* z-index: 3; */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.86rem;
+    box-sizing: border-box;
+    /* background-color: pink; */
+}
+.play-control .play-progress{
+    display: flex;
+    align-items: center;
+    height: 0.06rem;
+    padding:0 0.13rem;
+    /* background-color: skyblue; */
+}
+.play-control .play-progress .time{
+    width: 0.4rem;
+    height: 0.06rem;
+    line-height: 0.06rem;
+    text-align: center;
+    flex:0 0 0.4rem;
+    font-size: 0.06rem;
+    color: #a5a3a3;
+    /* background-color: red; */
+}
+.play-control .play-progress .progeess{
+    position: relative;
+    flex:1;
+    height: 0.012rem;
+    margin:0 0.04rem;
+    border-radius: 0.006rem;
+    background-color: #2f2929;
+    /* background-color:red; */
+    
+}
+
+.play-control .play-progress .progeess .pro-bar{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -0.024rem;
+    width: 0.048rem;
+    height: 0.048rem;
+    border-radius:50%;
+    background-color: #fff;
+}
+.play-control .play-progress .progeess .pro-bg{
+    width: 0.048rem;
+    height: 100%;
+    border-radius: 0.006rem;
+    background-color:#8b8888;
+}
+.play-control .controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0.8rem;
+    /* background-color:purple; */
+}
+.play-control .controls .playing{
+    display:flex;
+    width: 0.41rem;
+    height: 0.41rem;
+    border-radius: 50%;
+    /* background-color: skyblue; */
+}
+.play-control .controls .playing .iconfont{
+    width: 100%;
+    height: 100%;
+    color:#fff;
+    font-size:0.4rem ;
+}
+
+/* play-control end */
+
+/* lyric start */
+ 
+    .play-lyric{
+        overflow: hidden;
+        position: fixed;
+        top: 0.88rem;
+        left: 0;
+        right: 0;
+        bottom: 1.02rem;
+        /* background-color: pink; */
+    }
+    .play-lyric .lyric-wrap{
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        right: 0;
+        transition: 0.1 linear;
+        /* height: 1rem; */   
+        /* background-color:red; */
+    }
+    .play-lyric .lyric-wrap p{
+        position: relative;
+        height: 0.34rem;
+        line-height: 0.34rem;
+        font-size: 0.12rem;
+        color: #7f7676;
+        text-align: center;
+    
+    } 
+
+
+
+/* lyric start */
+
+
+
+@keyframes rotate{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+

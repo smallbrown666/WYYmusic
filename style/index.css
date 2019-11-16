@@ -1,0 +1,228 @@
+@charset 'UTF-8';
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333333;
+}
+/* header start */
+/*以后遇到需要将左右2个盒子固定 中间的盒子随页面宽度等比例占据100% 放大的情况  先将主盒子display:flex;  左右两边的盒子flex:0,0,固定宽度；  中间的盒子 flex:1; 这样就能分成3分 左右不变 中间任意改变*/
+.header-wrap{
+    margin-top:0.19rem;
+    /* width: 100%; */
+    /* height:0.28rem ; */
+    /* background-color: pink; */
+}
+.header-wrap .header{
+    display: flex;    /*弹性盒模型*/
+    height:0.28rem ;
+    /* background-color:red; */
+}
+.header-wrap .header a{
+    display: flex;/*设置flex 让span标签的内容显示在a标签内*/
+    width: 0.41rem;
+    justify-content: center;
+    line-height: 0.28rem;  
+    /* height: 0.28rem; */
+    flex: 0 0 0.41rem;  /*将 a  a head  分成3个小盒子 固定a的宽度*/
+    /* background-color: skyblue; */
+}
+.header-wrap .header a .iconfont{
+    font-size: 0.18rem;
+}
+.header-wrap .header .h-nav{
+    display: flex;
+    justify-content: center;
+    padding: 0 0.20rem;
+    line-height: 0.28rem;
+    flex:1;    /*将a  head a 分开*/
+}
+.header-wrap .header .h-nav ul{
+    /*ul 这个盒子左右2边是有一个padding的  真正的ul 宽度为601px / 3.375 / 100 = 1.78 rem*/
+    display: flex;  /*让合作里的内容一排显示  不用浮动了  上下居中*/
+    align-content: center;
+    justify-content: space-between; /*;li 两端对齐*/
+    width: 1.78rem;
+    font-size: 0.14rem;
+    flex: 1 0 1.78rem;
+    /* background-color:green; */
+}
+.header-wrap .header .h-nav ul li{
+    flex: 1;
+    text-align: center;
+}
+
+
+.swiper{
+   
+    position: relative;
+    width: 2.93rem;
+    margin: 0.14rem 0.13rem;
+    padding-top: 1.1rem;  /*这个是用来占位置的 如果图片加载不出啦 图片的位置也会留白 不会让后面的盒子顶上来*/
+    /* background-color:pink; */
+    /* border-radius:0.08rem; */
+}
+.swiper .swiper-container{
+   
+    /*这样写 这个盒子和swiper 一样大小 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius:0.08rem;
+}
+.swiper .swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 0.18rem;
+    background:pink;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper .swiper-slide .banner-img{
+      width: 100%;
+      height: 100%;
+  }
+  .swiper .swiper-slide .banner-imgtype{
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      width: 0.28rem;
+      height: 0.18rem;
+      line-height: 0.18rem;
+      text-align: center;
+      font-size: 0.08rem;
+      color: white;
+      border-top-left-radius: 0.06rem;
+  }
+
+  /*nav start*/
+    .nav{
+        /* background-color: pink; */
+        height: 0.3rem;
+    }
+    .nav .nav-list{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.13rem 0.16rem;
+        /* background-color:skyblue; */
+    }
+    .nav .nav-list .nav-item{
+        width: 0.38rem;
+        flex: 0 0 0.38rem;
+        /* height: 0.2rem; */
+        /* background-color:red; */
+    }
+    .nav .nav-list .nav-item .nav-img{
+        /* position: relative; */
+        display:flex;
+        height: .38rem;
+        border-radius: 50%;
+        justify-content: center;
+        line-height: 0.38rem;
+        background-color: red; 
+    }
+    .nav .nav-list .nav-item .nav-itle{
+        display: block;
+        font-size: 0.08rem;
+        margin-top:0.07rem;
+        text-align: center;
+        /* line-height: 0.08; */
+    }
+    .nav .nav-list .nav-item .nav-img .iconfont{
+       position: relative;
+       font-size:0.18rem;
+       color:white;
+    }
+    .nav .nav-list .nav-item .nav-img .iconfont .nav-time{
+        position: absolute;
+        top: 0.17rem;
+        left:0.012rem;
+        font-size: 0.07rem;
+        width: 0.15rem;
+        height: 0.1rem;
+        line-height: 0.1rem;
+        background-color: #fff;
+        color: red;
+        line-height: 0.1rem;
+        font-weight: bold;
+        font-style: normal;
+
+    }
+  /*nav end*/
+    .discover{
+        margin-top: 0.5rem;
+        /* height: 0.2rem; */
+        /* background-color: pink; */
+    }
+    .discover .dis-wrap{
+      padding: 0.17rem 0.13rem;
+        /* background-color: skyblue; */
+    }
+    .discover .dis-wrap .dis-tittle{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.13rem;
+        height: 0.2rem;
+        /* background-color: blue; */
+    }
+    .discover .dis-wrap .dis-tittle .name{
+        font-size: 0.13rem;
+        line-height: 0.2rem;
+        font-weight: bold;
+        color: black;
+    }
+    .discover .dis-wrap .dis-tittle .more{
+        overflow: hidden;
+        font-size: 0.058rem;
+        width: 0.54rem;
+        height: 0.19rem;
+        line-height: 0.19rem;
+        text-align: center;
+        border: 0.01rem solid #e6e6e6;
+        border-radius: 0.08rem;
+    }
+    .discover .dis-wrap .dis-tittle .more a:active{
+        color: #e6e6e6;
+    }
+    .discover .dis-wrap  .dis-content{
+        height: 3rem;
+        /* background-color: pink; */
+    }
+    .discover .dis-wrap  .dis-content .dis-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    .discover .dis-wrap .dis-content .dis-list .dis-item{
+        width: 0.92rem;
+        height: 1.22rem;
+        margin-bottom: 0.17rem;
+        /* background-color:skyblue ; */
+    }
+    .discover .dis-wrap  .dis-content .dis-list .dis-item .dis-img{
+        display:flex;
+        overflow: hidden;
+        height: 0.92rem;
+        border-radius: 0.04rem;
+        /* background-color: red; */
+    }
+    .discover .dis-wrap  .dis-content .dis-list .dis-item .dis-img img{
+        width: 100%;
+    }
+    .discover .dis-wrap  .dis-content .dis-list .dis-item .dis-desc{
+        font-size: 0.08rem;
+        color:#444;
+        line-height: 0.14rem;
+        padding-top:0.04rem;
+    }
+    
